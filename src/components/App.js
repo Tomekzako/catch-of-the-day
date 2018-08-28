@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Inventory from './Inventory';
+import Order from './Order';
 
 
 class App extends Component {
@@ -9,6 +11,8 @@ class App extends Component {
                 <div className="menu">
                     <Header />
                 </div>
+                <Order />
+                <Inventory />
             </div>
         )
     }
