@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import AddFishForm from './AddFishForm';
 
 
 class Inventory extends Component {
     render() {
-        return <div className="inventory">Inventory!!!</div>
+        return (
+            <div className="inventory">
+                <h2>Inventory</h2>
+                <form>
+                    <AddFishForm />
+                </form>
+            </div>
+        );
     }
 }
 
