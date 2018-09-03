@@ -16,6 +16,10 @@ class App extends Component {
             fishes: fishes
         })
     }
+
+    loadSampleFishes = () => {
+        alert('Loading Samples!!!');
+    }
     render() {
         return (
             <div className="catch-of-the-day">
@@ -23,7 +27,10 @@ class App extends Component {
                     <Header tagline="Fresh Seafood Market" />
                 </div>
                 <Order />
-                <Inventory addFish={this.addFish} />
+                <Inventory 
+                    addFish={this.addFish} 
+                    loadSampleFishes={this.loadSampleFishes} 
+                />
             </div>
         )
     }
