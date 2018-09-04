@@ -3,6 +3,7 @@ import Header from './Header';
 import Inventory from './Inventory';
 import Order from './Order';
 import sampleFishes from '../sample-fishes';
+import Fish from './Fish';
 
 class App extends Component {
     state = {
@@ -25,6 +26,12 @@ class App extends Component {
             <div className="catch-of-the-day">
                 <div className="menu">
                     <Header tagline="Fresh Seafood Market" />
+                    <ul className="fishes">
+                        {Object.keys(this.state.fishes).map( el => {
+                            return <Fish key={el} details={this.state.fishes[el]}/>
+                        })
+                    }
+                    </ul>
                 </div>
                 <Order />
                 <Inventory 
